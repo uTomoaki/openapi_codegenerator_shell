@@ -6,7 +6,7 @@ RED='\033[0;31m'
 NC='\033[0m'
 
 # 開始
-echo "${GREEN}========== [START] OpenAPI Generator: frontend ==========${NC}"
+echo "${GREEN}========== [START] OpenAPI Generator: backend ==========${NC}"
 
 # バリデーションチェック
 echo "${GREEN}[info] バリデーションチェック START${NC}"
@@ -23,10 +23,10 @@ echo "${GREEN}[info] コード生成 START${NC}"
 
 if docker run --rm -v $(pwd):/local openapitools/openapi-generator-cli:v7.7.0 generate \
     -i /local/spec/openapi.yaml \
-    -g typescript-axios \
+    -g php \
     -c /local/spec/config.json \
-    -o /local/build/frontend; then
-    echo "${GREEN}[info] コード生成に成功しました${NC}"
+    -o /local/build/backend; then
+    echo "${GREEN}[info] コード生成に成功し��した${NC}"
 else
     echo "${RED}[Error] コード生成に失敗しました。${NC}"
     exit 1
@@ -34,4 +34,4 @@ fi
 echo "${GREEN}[info] コード生成 OK${NC}"
 
 # 終了
-echo "${GREEN}========== [FINISH] OpenAPI Generator: frontend ==========${NC}"
+echo "${GREEN}========== [FINISH] OpenAPI Generator: backend ==========${NC}"
