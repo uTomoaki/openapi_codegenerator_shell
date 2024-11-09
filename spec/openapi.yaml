@@ -1,0 +1,13 @@
+openapi: 3.0.0
+info:
+  title: API一覧
+  description: サンプルAPI一覧です。
+  version: 1.0.0
+servers:
+  - url: http://localhost:2131/
+    description: The Local API server
+paths:
+  /api/sample-users:
+    $ref: "./path/sample-users.yaml"
+  /api/sample-users/{userId}:
+    $ref: "./path/sample-user-userId.yaml"

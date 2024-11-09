@@ -1,0 +1,87 @@
+get:
+  summary: サンプルユーザー情報取得
+  operationId: getSampleUsers
+  tags:
+    - SAMPLE
+  responses:
+    "200":
+      description: ユーザー情報取得成功
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: "John Doe"
+                email:
+                  type: string
+                  example: "john.doe@example.com"
+                age:
+                  type: integer
+                  example: 30
+                createdAt:
+                  type: string
+                  format: date-time
+                  example: "2024-07-01 12:00:00"
+                updatedAt:
+                  type: string
+                  format: date-time
+                  example: "2024-07-01 12:00:00"
+post:
+  summary: サンプルユーザー情報登録
+  operationId: createSampleUser
+  tags:
+    - SAMPLE
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            name:
+              type: string
+              format: string
+              example: "John Doe"
+            email:
+              type: string
+              format: email
+              example: "john.doe@example.com"
+            age:
+              type: integer
+              format: int32
+              example: 30
+          required:
+            - name
+            - email
+            - age
+  responses:
+    "200":
+      description: ユーザー登録成功
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: "John Doe"
+                email:
+                  type: string
+                  example: "john.doe@example.com"
+                age:
+                  type: integer
+                  example: 30
+                createdAt:
+                  type: string
+                  format: date-time
+                  example: "2024-07-01 12:00:00"
+                updatedAt:
+                  type: string
+                  format: date-time
+                  example: "2024-07-01 12:00:00"

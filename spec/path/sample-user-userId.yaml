@@ -1,0 +1,109 @@
+get:
+  summary: サンプルユーザー情報取得
+  operationId: getSampleUserById
+  tags:
+    - SAMPLE
+  parameters:
+    - name: userId
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    "200":
+      description: userIdに紐づくユーザー情報を取得
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+                example: "John Doe"
+              email:
+                type: string
+                example: "john.doe@example.com"
+              age:
+                type: integer
+                example: 30
+              createdAt:
+                type: string
+                format: date-time
+                example: "2024-07-01 12:00:00"
+              updatedAt:
+                type: string
+                format: date-time
+                example: "2024-07-01 12:00:00"
+put:
+  summary: サンプルユーザー情報更新
+  operationId: updateSampleUser
+  tags:
+    - SAMPLE
+  parameters:
+    - name: userId
+      in: path
+      required: true
+      schema:
+        type: string
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            name:
+              type: string
+              format: string
+              example: "John Doe"
+            email:
+              type: string
+              format: email
+              example: "john.doe@example.com"
+            age:
+              type: integer
+              format: int32
+              example: 30
+          required:
+            - name
+            - email
+            - age
+  responses:
+    "200":
+      description: ユーザー情報更新成功
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+                example: "John Doe"
+              email:
+                type: string
+                example: "john.doe@example.com"
+              age:
+                type: integer
+                example: 30
+              createdAt:
+                type: string
+                format: date-time
+                example: "2024-07-01 12:00:00"
+              updatedAt:
+                type: string
+                format: date-time
+                example: "2024-07-01 12:00:00"
+delete:
+  summary: サンプルユーザー情報削除
+  operationId: deleteSampleUser
+  tags:
+    - SAMPLE
+  parameters:
+    - name: userId
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    "200":
+      description: ユーザー情報削除成功
