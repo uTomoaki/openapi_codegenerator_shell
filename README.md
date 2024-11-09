@@ -7,6 +7,9 @@ OpenAPI定義を記述した`OpenAPI.yaml`ファイルを元に、`openapi-gener
 ### frontend
 - typescript-axios
 
+### backend
+- php
+
 ## 使い方
 ### OpenAPI.yamlファイルを一つに統合
 ※`build`配下に作成されるファイルはgit管理対象外にしています。
