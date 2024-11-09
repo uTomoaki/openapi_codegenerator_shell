@@ -3,6 +3,10 @@
 ## 概要
 OpenAPI定義を記述した`OpenAPI.yaml`ファイルを元に、`openapi-generator-cli`を利用してソースコードを自動生成するためのShell
 
+## 作成対象
+### frontend
+- typescript-axios
+
 ## 使い方
 ### OpenAPI.yamlファイルを一つに統合
 ※`build`配下に作成されるファイルはgit管理対象外にしています。
