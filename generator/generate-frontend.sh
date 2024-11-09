@@ -24,6 +24,7 @@ echo "${GREEN}[info] コード生成 START${NC}"
 if docker run --rm -v $(pwd):/local openapitools/openapi-generator-cli:v7.7.0 generate \
     -i /local/spec/openapi.yaml \
     -g typescript-axios \
+    -c /local/spec/config.json \
     -o /local/build/frontend; then
     echo "${GREEN}[info] コード生成に成功しました${NC}"
 else
