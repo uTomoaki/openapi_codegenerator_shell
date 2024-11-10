@@ -1,5 +1,5 @@
 ---
-name: 汎用テンプレート
+name: feature_template
 about: Issueを起票する際の汎用テンプレート
 title: ''
 labels: ''
